@@ -1,0 +1,16 @@
+@import '~src/assets/styles/variables';
+
+.app-footer {
+  overflow: hidden;
+  display: flex;
+  &__section {
+    display: inline-flex;
+    width: 100%;
+    border: 1px solid $border;
+    a {
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
