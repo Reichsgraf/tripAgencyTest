@@ -1,0 +1,23 @@
+@import '~src/assets/styles/variables';
+
+.app-header {
+  overflow: hidden;
+  display: flex;
+  &__section, .authentication {
+    display: inline-flex;
+    width: calc(100% - 154px);
+    border: 1px solid $border;
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .authentication {
+    width: 150px;
+    ::ng-deep button {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
