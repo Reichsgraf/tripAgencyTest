@@ -23,7 +23,8 @@
     margin: 10px 0;
     width: 100%;
     text-align: center;
-    text-shadow: stroke(1, lighten($border, 10%));
+    text-shadow: stroke(2, darken($border, 50%));
+    color: lighten($border, 10%);
     font-size: 20px;
     font-weight: 900;
   }
