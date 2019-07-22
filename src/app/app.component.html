@@ -1,11 +1,11 @@
 <div>
   <div class="app-header">
-    <app-header> <!--*ngIf="isLoggedIn$ | async as loggedIn"-->
-      <ng-container *ngIf="loggedIn; else logIn">
-        <button (click)="logout">Logout</button>
+    <app-header>
+      <ng-container *ngIf="isAuthenticated(); else logIn">
+        <button mat-raised-button (click)="logout()">Logout</button>
       </ng-container>
       <ng-template #logIn>
-        <button (click)="login()">Login</button>
+        <button mat-raised-button (click)="loginDialog()">Login</button>
       </ng-template>
     </app-header>
   </div>

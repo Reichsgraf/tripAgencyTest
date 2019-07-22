@@ -1,0 +1,14 @@
+<div class="trips-item"
+     [style.background]="image">
+    <span>
+      <p class="trips-item__title">
+        «{{ trip.title }}» — to {{ trip.location }}
+      </p>
+      <p>
+        Date<br>
+        from {{ getDate(trip.fromDate) | date:'long' }}<br>
+        to {{ getDate(trip.toDate) | date:'long' }}
+      </p>
+      <p>Price: {{ trip.price + ' USD' }}</p>
+    </span>
+</div>

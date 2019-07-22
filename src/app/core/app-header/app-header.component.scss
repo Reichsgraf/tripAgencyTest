@@ -3,17 +3,18 @@
 .app-header {
   overflow: hidden;
   display: flex;
-  &__section, .authentication {
+  &__section, &__auth {
     display: inline-flex;
-    width: calc(100% - 154px);
+    width: calc(100% - 150px);
     border: 1px solid $border;
     h1 {
       font-size: 20px;
       text-align: center;
       width: 100%;
+      margin: 10px;
     }
   }
-  .authentication {
+  &__auth {
     width: 150px;
     ::ng-deep button {
       width: 100%;
