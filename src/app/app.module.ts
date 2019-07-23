@@ -15,14 +15,17 @@ import { AppComponent } from './app.component';
 import { ApiPrefixInterceptor} from './core/authentication/interceptors/api-prefix.interceptor';
 import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
 import { TokenInterceptor } from './core/authentication/interceptors/token.interceptor';
+import {EmailSendingComponent} from './modules/email-sending/email-sending.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthDialogComponent
+    AuthDialogComponent,
+    EmailSendingComponent
   ],
   entryComponents: [
-    AuthDialogComponent
+    AuthDialogComponent,
+    EmailSendingComponent
   ],
   imports: [
     BrowserModule,

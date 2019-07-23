@@ -3,10 +3,10 @@
   <div class="app-header">
     <app-header>
       <ng-container *ngIf="isAuthenticated(); else logIn">
-        <button mat-raised-button (click)="logout()">Logout</button>
+        <button class="auth" mat-raised-button (click)="logout()">Logout</button>
       </ng-container>
       <ng-template #logIn>
-        <button mat-raised-button (click)="loginDialog()">Login</button>
+        <button class="auth" mat-raised-button (click)="loginDialog()">Login</button>
       </ng-template>
     </app-header>
   </div>

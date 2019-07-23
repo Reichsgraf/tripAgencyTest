@@ -1,8 +1,12 @@
 <div class="trips-item"
-     [style.background]="image">
+     [style.background]="image"
+     (click)="sendEmail()">
     <span>
       <p class="trips-item__title">
-        «{{ trip.title }}» — to {{ trip.location }}
+        Title: «{{ trip.title }}»
+      </p>
+      <p class="trips-item__title">
+        Location: {{ trip.location }}
       </p>
       <p>
         Date<br>

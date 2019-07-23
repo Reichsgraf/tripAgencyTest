@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 export class AppFooterComponent {
   constructor() {}
 
-  nothingToDo() {
-    console.log('Nothing happens');
-  }
+  nothingToDo() {}
 }

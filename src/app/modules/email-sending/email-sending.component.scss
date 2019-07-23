@@ -1,0 +1,13 @@
+@import "~src/assets/styles/styles";
+
+h1 {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  textarea {
+    resize: none;
+    word-break: break-word;
+  }
+}

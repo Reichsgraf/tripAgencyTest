@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Trip } from '../../../shared/models/trip.interface';
+import { DetailedTrip } from '../../../shared/models/detailed-trip.interface';
+
 
 @Component({
   selector: 'detailed-trips-item',
@@ -8,10 +9,9 @@ import { Trip } from '../../../shared/models/trip.interface';
 })
 export class DetailedTripsItemComponent {
   panelOpenState: boolean;
-  image: string;
 
   @Input()
-  detailedTrip: Trip;
+  detailedTrip: DetailedTrip;
 
   @Input()
   index: number;

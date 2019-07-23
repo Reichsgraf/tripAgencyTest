@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Want to get more information on</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <p>Message: </p>
+    <textarea type="text" rows="5"
+              matInput [(ngModel)]="data.message">
+    </textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="[data.title, data.message]" cdkFocusInitial>
+    Send
+  </button>
+  <button mat-button (click)="onCancelClick()">
+    Cancel
+  </button>
+</div>

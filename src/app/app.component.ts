@@ -33,7 +33,9 @@ export class AppComponent {
       });
     dialogRef.afterClosed()
       .subscribe(result => {
-          this.login(result);
+          if (!!result) {
+            this.login(result);
+          }
       });
   }
 
@@ -43,7 +45,6 @@ export class AppComponent {
       return this.authService.login(userName, password)
         .pipe(
           catchError(error => {
-            console.log(error);
             return error;
           })
         )

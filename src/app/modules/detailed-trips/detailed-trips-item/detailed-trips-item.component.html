@@ -12,7 +12,7 @@
       </h3>
     </mat-panel-description>
   </mat-expansion-panel-header>
-  <div>
+  <div class="trip-card">
     <div class="text-detail">
       <div class="detail">
         <div class="detail__category">
@@ -52,7 +52,17 @@
           Description:
         </div>
         <div class="detail__description">
-          {{ detailedTrip.description }}
+          {{ detailedTrip.description || 'there is no description' }}
+        </div>
+      </div>
+      <div class="detail">
+        <div class="detail__category">
+          Rating:
+        </div>
+        <div class="detail__description">
+          {{ detailedTrip.avgRating }}
+          <img class="like" src="assets/img/like.svg"
+               *ngIf="detailedTrip.like">
         </div>
       </div>
     </div>

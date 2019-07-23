@@ -15,21 +15,30 @@ h3 {
   margin: 10px;
 }
 
+.trip-card {
+  padding: 20px 0 0 0;
+}
+
 .text-detail {
   width: 70%;
   float: left;
   .detail {
-    padding: 25px 0;
     &__category {
       float: left;
+      text-align: right;
       width: 110px;
       font-size: 18px;
       font-weight: 600;
+      padding: 0 10px 0 0;
     }
     &__description {
       float: left;
+      text-align: justify;
       width: calc(100% - 110px);
       font-size: 16px;
+      padding: 0 0 20px 0;
+    }
+    .like {
     }
   }
 }
@@ -42,5 +51,6 @@ h3 {
   img {
     position: absolute;
     object-fit: cover;
+    padding: 2px;
   }
 }
