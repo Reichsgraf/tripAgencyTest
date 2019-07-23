@@ -1,9 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 import { Trip } from '../../../shared/models/trip.interface';
 import { EmailSendingComponent } from '../../email-sending/email-sending.component';
-import {AuthDialogComponent} from '../../../core/authentication/auth-dialog.component';
-import {MatDialog} from '@angular/material';
 
 @Component({
   selector: 'trips-item',

@@ -1,7 +1,4 @@
-// TODO: expansion panel
-// TODO: rework authentication with acceptance and error display
-
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DetailedTrip } from '../../shared/models/detailed-trip.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 
