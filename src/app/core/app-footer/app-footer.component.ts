@@ -9,6 +9,6 @@ export class AppFooterComponent {
   constructor() {}
 
   nothingToDo() {
-    console.log('Nothing happen');
+    console.log('Nothing happens');
   }
 }

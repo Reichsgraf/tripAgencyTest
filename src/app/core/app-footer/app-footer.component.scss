@@ -2,15 +2,16 @@
 
 .app-footer {
   overflow: hidden;
-  display: flex;
+  display: block;
   &__section {
     display: inline-flex;
     width: 100%;
     border: 1px solid $border;
     p {
       font-size: 20px;
-      width: 100%;
       text-align: center;
+      width: 100%;
+      margin: 10px;
     }
   }
 }

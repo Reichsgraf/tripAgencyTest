@@ -1,1 +1,7 @@
 @import "~src/assets/styles/styles";
+@import "~src/assets/styles/variables";
+
+.router-outlet {
+  background-color: lighten($border, 10%);
+}
+

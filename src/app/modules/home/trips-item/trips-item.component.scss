@@ -12,15 +12,14 @@
 }
 
 .trips-item {
-  display: inline-flex;
-  border: 1px solid $border;
-  min-width: 300px;
-  width: 40%;
-  margin: 40px calc(5% - 2px);
-  align-items: center;
+  display: inline-block;
+  width: 400px;
+  margin: 40px;
   min-height: 300px;
+  border-radius: 10px;
+  border: 1px solid $border;
   span {
-    margin: 10px 0;
+    margin: auto 10px;
     width: 100%;
     text-align: center;
     text-shadow: stroke(2, darken($border, 50%));

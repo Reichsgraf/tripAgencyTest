@@ -5,8 +5,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    // redirectTo: 'tripAgency',
-    loadChildren: './modules/modules.module#ModulesModule'
+    redirectTo: '/home'
   }
 ];
 

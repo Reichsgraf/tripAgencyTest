@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiPrefixInterceptor} from './core/authentication/interceptors/api-prefix.interceptor';
 import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
+import { TokenInterceptor } from './core/authentication/interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,11 @@ import { AuthDialogComponent } from './core/authentication/auth-dialog.component
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiPrefixInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
       multi: true
     }
   ],

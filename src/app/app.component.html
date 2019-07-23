@@ -1,4 +1,5 @@
 <div>
+
   <div class="app-header">
     <app-header>
       <ng-container *ngIf="isAuthenticated(); else logIn">
@@ -9,12 +10,15 @@
       </ng-template>
     </app-header>
   </div>
-  <div>
+
+  <div class="router-outlet">
     <router-outlet></router-outlet>
   </div>
+
   <div class="app-footer">
     <app-footer></app-footer>
   </div>
+
 </div>
 
 

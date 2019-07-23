@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 
 import { catchError } from 'rxjs/operators';
 
-import { AuthService } from './core/authentication/services/auth.service';
-import {AuthDialogComponent} from './core/authentication/auth-dialog.component';
 import { TokenService } from './core/authentication/services/token.service';
+import { AuthService } from './core/authentication/services/auth.service';
+import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
+
 
 @Component({
   selector: 'app-root',
@@ -19,6 +21,7 @@ export class AppComponent {
   constructor(
     private authService: AuthService,
     private tokenService: TokenService,
+    private router: Router,
     public dialog: MatDialog
   ) {}
 
@@ -36,7 +39,6 @@ export class AppComponent {
 
   login(userInfo) {
     const [userName, password] = userInfo;
-    // test, test1234
     if (!!userName && !!password) {
       return this.authService.login(userName, password)
         .pipe(
@@ -45,7 +47,9 @@ export class AppComponent {
             return error;
           })
         )
-        .subscribe();
+        .subscribe(
+          () => this.router.navigate(['/trips'])
+        );
     }
   }
 

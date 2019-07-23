@@ -1,0 +1,46 @@
+@import "~src/assets/styles/variables";
+
+mat-expansion-panel {
+  margin: 30px auto;
+  width: 80%;
+  border: 1px solid $border;
+  border-radius: 1px;
+  padding: 1px;
+  &-header {
+    border: 1px solid $border;
+  }
+}
+h3 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.text-detail {
+  width: 70%;
+  float: left;
+  .detail {
+    padding: 25px 0;
+    &__category {
+      float: left;
+      width: 110px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    &__description {
+      float: left;
+      width: calc(100% - 110px);
+      font-size: 16px;
+    }
+  }
+}
+
+.image-detail {
+  float: left;
+  position: relative;
+  width: 30%;
+  padding: 0;
+  img {
+    position: absolute;
+    object-fit: cover;
+  }
+}

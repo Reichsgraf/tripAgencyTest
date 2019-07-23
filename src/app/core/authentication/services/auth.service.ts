@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
+import { pluck, tap } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 import { User } from '../../../shared/models/user.interface';
 import { TokenService } from './token.service';
-import { pluck, tap } from 'rxjs/operators';
+
 
 @Injectable()
 export class AuthService {
@@ -12,6 +15,7 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
+    private router: Router,
     private tokenService: TokenService
   ) {}
 
@@ -29,5 +33,6 @@ export class AuthService {
 
   logout() {
     this.tokenService.removeToken();
+    this.router.navigate(['/home']);
   }
 }

@@ -1,0 +1,16 @@
+<div>
+  <div class="detailed-trip-list">
+    <div class="detailed-trip-list__header">
+      <h1>
+        My trips:
+      </h1>
+    </div>
+    <mat-accordion>
+      <detailed-trips-item
+        *ngFor="let detailedTrip of detailedTrips; index as i"
+        [detailedTrip]="detailedTrip"
+        [index]="i">
+      </detailed-trips-item>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,42 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
-
-import { HomeComponent } from './home/home.component';
 import { MaterialModule } from '../material-module';
+
+import { ModulesRoutingModule } from './modules-routing.module';
+import { AuthGuard } from '../core/authentication/guards/auth.guard';
 import { TripService } from './shared/services/trip.service';
+import { HomeComponent } from './home/home.component';
 import { TripsResolver } from './shared/resolvers/trips.resolver';
 import { TripsItemComponent } from './home/trips-item/trips-item.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-    resolve: {
-      trips: TripsResolver,
-    }
-  }
-];
+import { DetailedTripsComponent } from './detailed-trips/detailed-trips.component';
+import { DetailedTripsResolver } from './shared/resolvers/detailed-trips.resolver';
+import { DetailedTripsItemComponent } from './detailed-trips/detailed-trips-item/detailed-trips-item.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    TripsItemComponent
+    TripsItemComponent,
+    DetailedTripsComponent,
+    DetailedTripsItemComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes),
     CarouselModule,
-    WavesModule
+    WavesModule,
+    ModulesRoutingModule
   ],
   providers: [
     TripService,
-    TripsResolver
+    TripsResolver,
+    DetailedTripsResolver,
+    AuthGuard
   ]
 })
 export class ModulesModule {}

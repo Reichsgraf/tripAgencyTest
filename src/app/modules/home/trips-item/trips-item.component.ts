@@ -15,7 +15,7 @@ export class TripsItemComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.image = `url(${this.trip.imageUrl})`;
   }
 
