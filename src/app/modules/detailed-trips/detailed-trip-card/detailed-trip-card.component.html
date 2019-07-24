@@ -7,8 +7,8 @@
     <mat-panel-description *ngIf="!panelOpenState">
       <h3>
         «{{ detailedTrip.title }}» ({{ detailedTrip.location }}):
-        from {{ getDate(detailedTrip.fromDate) | date:'dd.MM.yy' }}
-        to {{ getDate(detailedTrip.toDate) | date:'dd.MM.yy' }}
+        from {{ detailedTrip.fromDate | date:'dd.MM.yy' }}
+        to {{ detailedTrip.toDate | date:'dd.MM.yy' }}
       </h3>
     </mat-panel-description>
   </mat-expansion-panel-header>
@@ -43,8 +43,8 @@
             Date:
           </div>
           <div class="detail__description">
-            from {{ getDate(detailedTrip.fromDate) | date:'long' }}<br>
-            to {{ getDate(detailedTrip.toDate) | date:'long' }}
+            from {{ detailedTrip.fromDate | date:'long' }}<br>
+            to {{ detailedTrip.toDate | date:'long' }}
           </div>
         </div>
         </mat-list-item>
@@ -79,7 +79,7 @@
           <div class="detail__description">
             {{ detailedTrip.avgRating }}
             <img class="like" src="assets/img/like.svg"
-                 *ngIf="detailedTrip.like">
+                 *ngIf="detailedTrip.like" alt="You like it!">
           </div>
         </div>
         </mat-list-item>

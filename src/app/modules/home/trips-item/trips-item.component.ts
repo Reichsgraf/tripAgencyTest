@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { Trip } from '../../../shared/models/trip.interface';
-import { EmailSendingComponent } from '../../email-sending/email-sending.component';
+import { EmailSendingComponent } from '../email-sending/email-sending.component';
 
 @Component({
   selector: 'trips-item',
@@ -23,10 +23,6 @@ export class TripsItemComponent implements OnInit {
 
   ngOnInit() {
     this.image = `url(${this.trip.imageUrl})`;
-  }
-
-  getDate(date: string) {
-    return new Date(date);
   }
 
   sendEmail() {

@@ -3,7 +3,7 @@
 
 .slider {
   width: 100%;
-  border: 1px solid $border;
+  border-bottom: 1px solid $border;
   img {
     height: 350px;
     width: 100%;
@@ -13,4 +13,12 @@
 .trips-list {
   display: block;
   text-align: center;
+}
+
+.carousel-control-next {
+  display: none;
+}
+
+.carousel-control-prev {
+  display: none;
 }

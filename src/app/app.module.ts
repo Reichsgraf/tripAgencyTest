@@ -14,8 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiPrefixInterceptor} from './core/authentication/interceptors/api-prefix.interceptor';
 import { TokenInterceptor } from './core/authentication/interceptors/token.interceptor';
-import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
-import { EmailSendingComponent } from './modules/email-sending/email-sending.component';
+import { AuthDialogComponent } from './core/authentication/components/auth-dialog.component';
+import { EmailSendingComponent } from './modules/home/email-sending/email-sending.component';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
-import { User } from '../../shared/models/user.interface';
+import { User } from '../../../shared/models/user.interface';
 
 @Component({
   selector: 'auth-dialog',

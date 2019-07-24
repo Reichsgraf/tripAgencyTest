@@ -16,10 +16,10 @@
   width: 400px;
   margin: 50px;
   min-height: 200px;
-  border-radius: 10px;
+  border-radius: 25px;
   border: 1px solid $border;
-  span {
-    margin: auto 10px;
+  &__info {
+    margin: 50px 10px;
     width: 100%;
     text-align: center;
     text-shadow: stroke(2, darken($border, 60%));

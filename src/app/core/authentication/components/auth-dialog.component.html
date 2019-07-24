@@ -1,12 +1,16 @@
 <h1 mat-dialog-title>Login</h1>
 <div mat-dialog-content>
   <mat-form-field>
-    <p>Username:</p>
-    <input type="text" matInput [(ngModel)]="data.userName">
+    <label>
+      <p>Username:</p>
+      <input type="text" matInput [(ngModel)]="data.userName">
+    </label>
   </mat-form-field>
   <mat-form-field>
-    <p>Password:</p>
-    <input type="password" matInput [(ngModel)]="data.password">
+    <label>
+      <p>Password:</p>
+      <input type="password" matInput [(ngModel)]="data.password">
+    </label>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>

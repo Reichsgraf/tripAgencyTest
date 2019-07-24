@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
-import { Email } from '../../shared/models/email.interface';
+import { Email } from '../../../shared/models/email.interface';
 
 @Component({
   selector: 'email-sending',

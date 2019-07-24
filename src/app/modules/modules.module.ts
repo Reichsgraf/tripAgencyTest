@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md'
 import { MaterialModule } from '../material-module';
 
-import { ModulesRoutingModule } from './modules-routing.module';
 import { AuthGuard } from '../core/authentication/guards/auth.guard';
 import { TripService } from './shared/services/trip.service';
 import { HomeComponent } from './home/home.component';
@@ -27,8 +26,7 @@ import { DetailedTripCardComponent } from './detailed-trips/detailed-trip-card/d
     MaterialModule,
     ReactiveFormsModule,
     CarouselModule,
-    WavesModule,
-    ModulesRoutingModule
+    WavesModule
   ],
   providers: [
     TripService,

@@ -10,20 +10,25 @@ mat-expansion-panel {
   &-header {
     border: 1px solid $border;
   }
+  h3 {
+    font-size: 20px;
+    margin: 10px;
+  }
 }
-h3 {
-  font-size: 20px;
-  margin: 10px;
-}
+
 .trip-card {
   display: flex;
   padding: 10px 0;
 }
+
 .text-detail {
   display: inline-flex;
   width: 65%;
   float: left;
   padding: 10px 0;
+  mat-list {
+    width: 100%;
+  }
   mat-list-item {
     height: auto;
   }
@@ -57,14 +62,12 @@ h3 {
   display: inline-flex;
   float: left;
   position: relative;
-  width: 35%;
   overflow: hidden;
+  width: 35%;
   border: 1px solid $border;
   border-radius: 25px;
   img {
     position: absolute;
     object-fit: cover;
-    top: -50%;
-    left: -50%;
   }
 }

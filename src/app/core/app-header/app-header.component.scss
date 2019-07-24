@@ -6,7 +6,7 @@
   &__section, &__auth {
     display: inline-flex;
     width: calc(100% - 150px);
-    border: 1px solid $border;
+    border-bottom: 1px solid $border;
     h1 {
       font-size: 20px;
       text-align: center;

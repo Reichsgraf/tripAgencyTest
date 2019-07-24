@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 
 import { catchError } from 'rxjs/operators';
 
-import { TokenService } from './core/authentication/services/token.service';
+import { TokenService } from './core/services/token.service';
 import { AuthService } from './core/authentication/services/auth.service';
-import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
+import { AuthDialogComponent } from './core/authentication/components/auth-dialog.component';
 
 
 @Component({

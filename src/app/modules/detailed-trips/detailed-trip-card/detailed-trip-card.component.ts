@@ -17,9 +17,5 @@ export class DetailedTripCardComponent {
   index: number;
 
   constructor() {}
-
-  getDate(date: string) {
-    return new Date(date);
-  }
 }
 

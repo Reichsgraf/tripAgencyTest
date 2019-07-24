@@ -1,7 +1,7 @@
 <div class="trips-item"
      [style.background]="image"
      (click)="sendEmail()">
-  <span>
+  <div class="trips-item__info">
     <p class="trips-item__title">
       Title: «{{ trip.title }}»
     </p>
@@ -12,11 +12,11 @@
       Date:
     </p>
     <p>
-      from {{ getDate(trip.fromDate) | date:'LLL dd, yyyy' }}
-      to {{ getDate(trip.toDate) | date:'LLL dd, yyyy' }}
+      from {{ trip.fromDate | date:'LLL dd, yyyy' }}
+      to {{ trip.toDate | date:'LLL dd, yyyy' }}
     </p>
     <p class="trips-item__title">
       Price: {{ trip.price + ' USD' }}
     </p>
-  </span>
+  </div>
 </div>

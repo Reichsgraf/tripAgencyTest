@@ -1,10 +1,12 @@
-<h1 mat-dialog-title>Want to get more information on</h1>
+<h1 mat-dialog-title>Want to get more information on?</h1>
 <div mat-dialog-content>
   <mat-form-field>
-    <p>Message: </p>
-    <textarea type="text" rows="5"
-              matInput [(ngModel)]="data.message">
-    </textarea>
+    <label>
+      <p>Message:</p>
+      <textarea type="text" rows="5"
+                matInput [(ngModel)]="data.message">
+      </textarea>
+    </label>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>

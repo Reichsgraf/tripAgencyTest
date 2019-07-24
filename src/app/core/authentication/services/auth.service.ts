@@ -6,7 +6,7 @@ import { pluck, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 import { User } from '../../../shared/models/user.interface';
-import { TokenService } from './token.service';
+import { TokenService } from '../../services/token.service';
 
 
 @Injectable()
