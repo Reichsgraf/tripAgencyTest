@@ -1,24 +1,26 @@
 <div>
-
   <div class="app-header">
     <app-header>
       <ng-container *ngIf="isAuthenticated(); else logIn">
-        <button class="auth" mat-raised-button (click)="logout()">Logout</button>
+        <button class="auth" mat-raised-button
+                (click)="logout()">
+          Logout
+        </button>
       </ng-container>
       <ng-template #logIn>
-        <button class="auth" mat-raised-button (click)="loginDialog()">Login</button>
+        <button class="auth" mat-raised-button
+                (click)="loginDialog()">
+          Login
+        </button>
       </ng-template>
     </app-header>
   </div>
-
   <div class="router-outlet">
     <router-outlet></router-outlet>
   </div>
-
   <div class="app-footer">
     <app-footer></app-footer>
   </div>
-
 </div>
 
 

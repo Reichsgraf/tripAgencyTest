@@ -3,11 +3,11 @@ import { DetailedTrip } from '../../../shared/models/detailed-trip.interface';
 
 
 @Component({
-  selector: 'detailed-trips-item',
-  styleUrls: ['detailed-trips-item.component.scss'],
-  templateUrl: 'detailed-trips-item.component.html'
+  selector: 'detailed-trip-card',
+  styleUrls: ['detailed-trip-card.component.scss'],
+  templateUrl: 'detailed-trip-card.component.html'
 })
-export class DetailedTripsItemComponent {
+export class DetailedTripCardComponent {
   panelOpenState: boolean;
 
   @Input()

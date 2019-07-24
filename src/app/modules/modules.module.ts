@@ -13,14 +13,14 @@ import { TripsResolver } from './shared/resolvers/trips.resolver';
 import { TripsItemComponent } from './home/trips-item/trips-item.component';
 import { DetailedTripsComponent } from './detailed-trips/detailed-trips.component';
 import { DetailedTripsResolver } from './shared/resolvers/detailed-trips.resolver';
-import { DetailedTripsItemComponent } from './detailed-trips/detailed-trips-item/detailed-trips-item.component';
+import { DetailedTripCardComponent } from './detailed-trips/detailed-trip-card/detailed-trip-card.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     TripsItemComponent,
     DetailedTripsComponent,
-    DetailedTripsItemComponent
+    DetailedTripCardComponent
   ],
   imports: [
     CommonModule,

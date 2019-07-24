@@ -1,16 +1,16 @@
 <h1 mat-dialog-title>Login</h1>
 <div mat-dialog-content>
   <mat-form-field>
-    <p>Username: </p>
+    <p>Username:</p>
     <input type="text" matInput [(ngModel)]="data.userName">
   </mat-form-field>
   <mat-form-field>
-    <p>Password: </p>
+    <p>Password:</p>
     <input type="password" matInput [(ngModel)]="data.password">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="[data.userName, data.password]" cdkFocusInitial>
+  <button mat-button [mat-dialog-close]="[data.userName, data.password]">
     Login
   </button>
   <button mat-button (click)="onCancelClick()">
