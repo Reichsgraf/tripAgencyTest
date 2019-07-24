@@ -1,3 +1,4 @@
+@import "~src/assets/styles/styles";
 @import "~src/assets/styles/variables";
 
 mat-expansion-panel {
@@ -5,7 +6,7 @@ mat-expansion-panel {
   width: 80%;
   border: 1px solid $border;
   border-radius: 1px;
-  padding: 1px;
+  padding: 2px;
   &-header {
     border: 1px solid $border;
   }
@@ -14,16 +15,24 @@ h3 {
   font-size: 20px;
   margin: 10px;
 }
-
 .trip-card {
-
+  display: flex;
+  padding: 10px 0;
 }
-
 .text-detail {
-  width: 70%;
+  display: inline-flex;
+  width: 65%;
   float: left;
-  padding: 20px 0 0 0;
+  padding: 10px 0;
+  mat-list-item {
+    height: auto;
+  }
+  mat-divider {
+    margin: 15px 15px 15px 0;
+    height: 2px;
+  }
   .detail {
+    display: block;
     &__category {
       float: left;
       text-align: right;
@@ -37,21 +46,25 @@ h3 {
       text-align: justify;
       width: calc(100% - 110px);
       font-size: 16px;
-      padding: 0 0 20px 0;
     }
     .like {
+      width: 16px;
     }
   }
 }
 
 .image-detail {
+  display: inline-flex;
   float: left;
   position: relative;
-  width: 30%;
-  padding: 0;
+  width: 35%;
+  overflow: hidden;
+  border: 1px solid $border;
+  border-radius: 25px;
   img {
     position: absolute;
     object-fit: cover;
-    padding: 2px;
+    top: -50%;
+    left: -50%;
   }
 }

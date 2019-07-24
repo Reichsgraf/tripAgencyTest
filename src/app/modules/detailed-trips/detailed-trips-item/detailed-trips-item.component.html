@@ -7,65 +7,84 @@
     <mat-panel-description *ngIf="!panelOpenState">
       <h3>
         «{{ detailedTrip.title }}» ({{ detailedTrip.location }}):
-        from {{ getDate(detailedTrip.fromDate) | date:'shortDate' }}
-        to {{ getDate(detailedTrip.toDate) | date:'shortDate' }}
+        from {{ getDate(detailedTrip.fromDate) | date:'dd.MM.yy' }}
+        to {{ getDate(detailedTrip.toDate) | date:'dd.MM.yy' }}
       </h3>
     </mat-panel-description>
   </mat-expansion-panel-header>
   <div class="trip-card">
-    <div class="text-detail">
-      <div class="detail">
-        <div class="detail__category">
-          Title:
+      <div class="text-detail">
+        <mat-list>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Title:
+          </div>
+          <div class="detail__description">
+            «{{ detailedTrip.title }}»
+          </div>
         </div>
-        <div class="detail__description">
-          «{{ detailedTrip.title }}»
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Location:
+          </div>
+          <div class="detail__description">
+            {{ detailedTrip.location }}
+          </div>
         </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Date:
+          </div>
+          <div class="detail__description">
+            from {{ getDate(detailedTrip.fromDate) | date:'long' }}<br>
+            to {{ getDate(detailedTrip.toDate) | date:'long' }}
+          </div>
+        </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Price:
+          </div>
+          <div class="detail__description">
+            {{ detailedTrip.price + ' USD' }}
+          </div>
+        </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Description:
+          </div>
+          <div class="detail__description">
+            {{ detailedTrip.description || 'there is no description' }}
+          </div>
+        </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+        <div class="detail">
+          <div class="detail__category">
+            Rating:
+          </div>
+          <div class="detail__description">
+            {{ detailedTrip.avgRating }}
+            <img class="like" src="assets/img/like.svg"
+                 *ngIf="detailedTrip.like">
+          </div>
+        </div>
+        </mat-list-item>
+        </mat-list>
       </div>
-      <div class="detail">
-        <div class="detail__category">
-          Location:
-        </div>
-        <div class="detail__description">
-          {{ detailedTrip.location }}
-        </div>
-      </div>
-      <div class="detail">
-        <div class="detail__category">
-          Date:
-        </div>
-        <div class="detail__description">
-          from {{ getDate(detailedTrip.fromDate) | date:'long' }}
-          — to {{ getDate(detailedTrip.toDate) | date:'long' }}
-        </div>
-      </div>
-      <div class="detail">
-        <div class="detail__category">
-          Price:
-        </div>
-        <div class="detail__description">
-          {{ detailedTrip.price + ' USD' }}
-        </div>
-      </div>
-      <div class="detail">
-        <div class="detail__category">
-          Description:
-        </div>
-        <div class="detail__description">
-          {{ detailedTrip.description || 'there is no description' }}
-        </div>
-      </div>
-      <div class="detail">
-        <div class="detail__category">
-          Rating:
-        </div>
-        <div class="detail__description">
-          {{ detailedTrip.avgRating }}
-          <img class="like" src="assets/img/like.svg"
-               *ngIf="detailedTrip.like">
-        </div>
-      </div>
-    </div>
     <div class="image-detail">
       <img src="{{ detailedTrip.imageUrl }}">
     </div>

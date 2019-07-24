@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,9 +13,9 @@ import { ModulesModule } from './modules/modules.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ApiPrefixInterceptor} from './core/authentication/interceptors/api-prefix.interceptor';
-import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
 import { TokenInterceptor } from './core/authentication/interceptors/token.interceptor';
-import {EmailSendingComponent} from './modules/email-sending/email-sending.component';
+import { AuthDialogComponent } from './core/authentication/auth-dialog.component';
+import { EmailSendingComponent } from './modules/email-sending/email-sending.component';
 
 @NgModule({
   declarations: [
