@@ -45,12 +45,15 @@ export class AppComponent {
       return this.authService.login(userName, password)
         .pipe(
           catchError(error => {
+            this.loginDialog();
             return error;
-          })
+          }),
         )
         .subscribe(
           () => this.router.navigate(['/trips'])
         );
+    } else {
+      this.loginDialog();
     }
   }
 
