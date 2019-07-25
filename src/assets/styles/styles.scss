@@ -22,3 +22,14 @@ div.mat-dialog-actions {
     width: 40%;
   }
 }
+
+.carousel {
+  a {
+    display: none!important;
+  }
+  li {
+    width: 15px!important;
+    height: 15px!important;
+    pointer-events: none!important;
+  }
+}

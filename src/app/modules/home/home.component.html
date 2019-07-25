@@ -6,7 +6,7 @@
                   [interval]="5000">
       <mdb-carousel-item *ngFor="let slide of slides">
         <div class="view">
-          <img class="d-block w-100" src="{{ slide.imageUrl }}" alt="First slide">
+          <img class="d-block w-100" [src]="slide.imageUrl" alt="First slide">
           <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
         </div>
         <div class="carousel-caption">
