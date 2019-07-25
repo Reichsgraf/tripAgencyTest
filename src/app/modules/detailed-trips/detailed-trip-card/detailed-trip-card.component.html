@@ -13,78 +13,78 @@
     </mat-panel-description>
   </mat-expansion-panel-header>
   <div class="trip-card">
-      <div class="text-detail">
-        <mat-list>
+    <div class="text-detail">
+      <mat-list>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Title:
+          <div class="detail">
+            <div class="detail__category">
+              Title:
+            </div>
+            <div class="detail__description">
+              «{{ detailedTrip.title }}»
+            </div>
           </div>
-          <div class="detail__description">
-            «{{ detailedTrip.title }}»
-          </div>
-        </div>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Location:
+          <div class="detail">
+            <div class="detail__category">
+              Location:
+            </div>
+            <div class="detail__description">
+              {{ detailedTrip.location }}
+            </div>
           </div>
-          <div class="detail__description">
-            {{ detailedTrip.location }}
-          </div>
-        </div>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Date:
+          <div class="detail">
+            <div class="detail__category">
+              Date:
+            </div>
+            <div class="detail__description">
+              from {{ detailedTrip.fromDate | date:'long' }}<br>
+              to {{ detailedTrip.toDate | date:'long' }}
+            </div>
           </div>
-          <div class="detail__description">
-            from {{ detailedTrip.fromDate | date:'long' }}<br>
-            to {{ detailedTrip.toDate | date:'long' }}
-          </div>
-        </div>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Price:
+          <div class="detail">
+            <div class="detail__category">
+              Price:
+            </div>
+            <div class="detail__description">
+              {{ detailedTrip.price + ' USD' }}
+            </div>
           </div>
-          <div class="detail__description">
-            {{ detailedTrip.price + ' USD' }}
-          </div>
-        </div>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Description:
+          <div class="detail">
+            <div class="detail__category">
+              Description:
+            </div>
+            <div class="detail__description">
+              {{ detailedTrip.description }}
+            </div>
           </div>
-          <div class="detail__description">
-            {{ detailedTrip.description || 'there is no description' }}
-          </div>
-        </div>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
-        <div class="detail">
-          <div class="detail__category">
-            Rating:
+          <div class="detail">
+            <div class="detail__category">
+              Rating:
+            </div>
+            <div class="detail__description">
+              {{ detailedTrip.avgRating }}
+              <img class="like" src="assets/img/like.svg"
+                   *ngIf="detailedTrip.like">
+            </div>
           </div>
-          <div class="detail__description">
-            {{ detailedTrip.avgRating }}
-            <img class="like" src="assets/img/like.svg"
-                 *ngIf="detailedTrip.like" alt="You like it!">
-          </div>
-        </div>
         </mat-list-item>
-        </mat-list>
-      </div>
+      </mat-list>
+    </div>
     <div class="image-detail">
       <img src="{{ detailedTrip.imageUrl }}">
     </div>

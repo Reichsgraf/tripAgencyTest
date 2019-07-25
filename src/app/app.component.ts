@@ -28,7 +28,7 @@ export class AppComponent {
   loginDialog() {
     const dialogRef = this.dialog.open(
       AuthDialogComponent, {
-        width: '250px',
+        width: '300px',
         data: { userName: this.userName, password: this.password }
       });
     dialogRef.afterClosed()

@@ -1,4 +1,4 @@
-@import "~src/assets/styles/variables";
+@import "~src/assets/styles/styles";
 
 @function stroke($stroke, $color) {
   $shadow: ();
@@ -12,23 +12,23 @@
 }
 
 .trips-item {
+  border: 1px solid $border;
+  border-radius: 25px;
   display: inline-block;
-  width: 400px;
   margin: 50px;
   min-height: 200px;
-  border-radius: 25px;
-  border: 1px solid $border;
+  width: 400px;
   &__info {
-    margin: 50px 10px;
-    width: 100%;
-    text-align: center;
-    text-shadow: stroke(2, darken($border, 60%));
     color: lighten($border, 10%);
     font-size: 20px;
     font-weight: 900;
-  }
-  &__title {
-    font-size: 24px;
-    margin: 10px;
+    margin: 50px 10px;
+    text-align: center;
+    text-shadow: stroke(3, darken($border, 60%));
+    width: 100%;
+    &--title {
+      font-size: 24px;
+      margin: 10px;
+    }
   }
 }

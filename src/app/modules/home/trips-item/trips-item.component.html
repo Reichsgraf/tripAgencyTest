@@ -2,20 +2,20 @@
      [style.background]="image"
      (click)="sendEmail()">
   <div class="trips-item__info">
-    <p class="trips-item__title">
+    <p class="trips-item__info--title">
       Title: «{{ trip.title }}»
     </p>
-    <p class="trips-item__title">
+    <p class="trips-item__info--title">
       Location: {{ trip.location }}
     </p>
-    <p class="trips-item__title">
+    <p class="trips-item__info--title">
       Date:
     </p>
     <p>
       from {{ trip.fromDate | date:'LLL dd, yyyy' }}
       to {{ trip.toDate | date:'LLL dd, yyyy' }}
     </p>
-    <p class="trips-item__title">
+    <p class="trips-item__info--title">
       Price: {{ trip.price + ' USD' }}
     </p>
   </div>

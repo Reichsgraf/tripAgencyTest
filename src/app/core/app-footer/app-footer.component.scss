@@ -1,17 +1,9 @@
-@import '~src/assets/styles/variables';
+@import "../shared/shared.styles";
 
 .app-footer {
-  overflow: hidden;
-  display: block;
   &__section {
+    border-top: 1px solid $border;
     display: inline-flex;
     width: 100%;
-    border-top: 1px solid $border;
-    p {
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-      margin: 10px;
-    }
   }
 }

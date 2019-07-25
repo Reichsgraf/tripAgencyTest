@@ -1,18 +1,10 @@
-@import '~src/assets/styles/variables';
+@import "../shared/shared.styles";
 
 .app-header {
-  overflow: hidden;
-  display: flex;
   &__section, &__auth {
+    border-bottom: 1px solid $border;
     display: inline-flex;
     width: calc(100% - 150px);
-    border-bottom: 1px solid $border;
-    h1 {
-      font-size: 20px;
-      text-align: center;
-      width: 100%;
-      margin: 10px;
-    }
   }
   &__auth {
     width: 150px;
