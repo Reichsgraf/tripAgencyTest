@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.trips = [...this.route.snapshot.data.trips] || [];
+    if (!this.route.snapshot.data.trips.isEmpty) {
+      this.trips = this.route.snapshot.data.trips;
+    }
   }
 }

@@ -16,6 +16,8 @@ export class DetailedTripsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.detailedTrips = [...this.route.snapshot.data.detailedTrips] || [];
+    if (!this.route.snapshot.data.detailedTrips.isEmpty) {
+      this.detailedTrips = this.route.snapshot.data.detailedTrips;
+    }
   }
 }
